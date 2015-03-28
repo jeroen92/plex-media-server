@@ -9,12 +9,12 @@ class plexmediaserver::params {
     'Debian': {
       case $::architecture {
         'i386': {
-          $plex_url = 'http://downloads.plexapp.com/plex-media-server/0.9.9.12.504-3e7f93c/plexmediaserver_0.9.9.12.504-3e7f93c_i386.deb'
+	  $plex_url = 'http://downloads.plexapp.com/plex-media-server/0.9.9.12.504-3e7f93c/plexmediaserver_0.9.9.12.504-3e7f93c_i386.deb'
           $plex_pkg = 'plexmediaserver_0.9.9.12.504-3e7f93c_i386.deb'
         }
         default : {
-          $plex_url = 'http://downloads.plexapp.com/plex-media-server/0.9.9.12.504-3e7f93c/plexmediaserver_0.9.9.12.504-3e7f93c_amd64.deb'
-          $plex_pkg = 'plexmediaserver_0.9.9.12.504-3e7f93c_amd64.deb'
+	  $plex_url = 'https://downloads.plex.tv/plex-media-server/0.9.11.7.803-87d0708/plexmediaserver_0.9.11.7.803-87d0708_amd64.deb'
+          $plex_pkg = 'plexmediaserver_0.9.11.7.803-87d0708_amd64.deb'
         }
       }
       $plex_provider = 'dpkg'
