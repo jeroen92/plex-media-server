@@ -41,7 +41,7 @@ class plexmediaserver (
   Package {
     ensure => installed,
   }
-  if $::operatingsystem == 'ubuntu' {
+  if $::osfamily == 'debian' {
     package { 'libavahi-common-data': } -> package { 'libavahi-common3': } -> package { 'avahi-utils': } ->
     package { $plexmediaserver::params::plex_ubuntu_deps:
       before => Package['plexmediaserver'],
